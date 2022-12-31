@@ -11,4 +11,4 @@ jobs:
       - uses: actions/checkout@v2
       - uses: ./validate-tweet
         with:
-          tweet: this is a valid tweet!!!
+          tweet: this is a valid tweet.!!!
