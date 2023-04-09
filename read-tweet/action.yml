@@ -8,6 +8,10 @@ inputs:
     required: false
   changelog:
     required: true
+  repo_name:
+    required: false
+  org_name:
+    required: false
 runs:
   using: "docker"
   image: "Dockerfile"

@@ -8,7 +8,11 @@ changelog = os.environ["INPUT_CHANGELOG"]
 version = os.environ.get("INPUT_VERSION", "(next)")
 contributor_name = os.environ["INPUT_CONTRIBUTOR_NAME"]
 contributor_twitter = os.environ.get("INPUT_CONTRIBUTOR_TWITTER_USERNAME", "").strip()
-release_url = f"https://github.com/martinmore-team/prueba1-gha/releases/tag/{version}"
+
+repo_name = os.environ["INPUT_REPO_NAME"]
+org_name = os.environ["INPUT_ORG_NAME"]
+
+release_url = f"https://github.com/{org_name}/{repo_name}/releases/tag/{version}"
 
 if contributor_twitter and contributor_twitter[0] != "@":
     contributor_twitter = f"@{contributor_twitter}"
